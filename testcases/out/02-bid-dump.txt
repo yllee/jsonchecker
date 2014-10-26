@@ -1,0 +1,138 @@
+{
+  "status": "success",
+  "bids": [
+    {
+      "row": 1,
+      "userid": "zac.ng.2009",
+      "amount": 33.0,
+      "result": "out"
+    },
+    {
+      "row": 2,
+      "userid": "yasir.ng.2009",
+      "amount": 32.0,
+      "result": "out"
+    },
+    {
+      "row": 3,
+      "userid": "xavier.ng.2009",
+      "amount": 31.0,
+      "result": "out"
+    },
+    {
+      "row": 4,
+      "userid": "winston.ng.2009",
+      "amount": 30.0,
+      "result": "out"
+    },
+    {
+      "row": 5,
+      "userid": "valarie.ng.2009",
+      "amount": 29.0,
+      "result": "out"
+    },
+    {
+      "row": 6,
+      "userid": "ursala.ng.2009",
+      "amount": 28.0,
+      "result": "out"
+    },
+    {
+      "row": 7,
+      "userid": "timothy.ng.2009",
+      "amount": 27.0,
+      "result": "out"
+    },
+    {
+      "row": 8,
+      "userid": "steven.ng.2009",
+      "amount": 26.0,
+      "result": "out"
+    },
+    {
+      "row": 9,
+      "userid": "parker.ng.2009",
+      "amount": 24.0,
+      "result": "out"
+    },
+    {
+      "row": 10,
+      "userid": "quiten.ng.2009",
+      "amount": 24.0,
+      "result": "out"
+    },
+    {
+      "row": 11,
+      "userid": "ricky.ng.2009",
+      "amount": 24.0,
+      "result": "out"
+    },
+    {
+      "row": 12,
+      "userid": "olivia.ng.2009",
+      "amount": 22.0,
+      "result": "out"
+    },
+    {
+      "row": 13,
+      "userid": "neilson.ng.2009",
+      "amount": 21.0,
+      "result": "out"
+    },
+    {
+      "row": 14,
+      "userid": "maggie.ng.2009",
+      "amount": 20.0,
+      "result": "out"
+    },
+    {
+      "row": 15,
+      "userid": "larry.ng.2009",
+      "amount": 19.0,
+      "result": "out"
+    },
+    {
+      "row": 16,
+      "userid": "ian.ng.2009",
+      "amount": 18.0,
+      "result": "out"
+    },
+    {
+      "row": 17,
+      "userid": "harry.ng.2009",
+      "amount": 17.0,
+      "result": "out"
+    },
+    {
+      "row": 18,
+      "userid": "fred.ng.2009",
+      "amount": 15.0,
+      "result": "out"
+    },
+    {
+      "row": 19,
+      "userid": "eddy.ng.2009",
+      "amount": 14.0,
+      "result": "out"
+    },
+    {
+      "row": 20,
+      "userid": "dawn.ng.2009",
+      "amount": 13.0,
+      "result": "out"
+    },
+    {
+      "row": 21,
+      "userid": "calvin.ng.2009",
+      "amount": 12.0,
+      "result": "out"
+    },
+    {
+      "row": 22,
+      "userid": "ben.ng.2009",
+      "amount": 11.0,
+      "result": "out"
+    }
+  ]
+}
+
