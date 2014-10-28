@@ -1,23 +1,22 @@
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.http.HttpVersion;
-import org.apache.http.client.HttpClient;
+import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.entity.mime.HttpMultipartMode;
-import org.apache.http.entity.mime.MultipartEntity;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.CoreProtocolPNames;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
 import java.io.*;
-import java.net.URI;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class JSONChecker {
     private static final String INPUT_DIR = "testcases/in/";
@@ -26,6 +25,8 @@ public class JSONChecker {
 
 
     private String url;
+    private String token;
+
 
     public JSONChecker(String url) {
         this.url = url;
@@ -34,6 +35,7 @@ public class JSONChecker {
     public static void writeOutput(String file, String response) {
         try {
             PrintWriter out = new PrintWriter(new FileOutputStream((YOURS_DIR + file)));
+
 
             out.println(response);
             out.close();
@@ -52,7 +54,7 @@ public class JSONChecker {
         System.setProperty("org.apache.commons.logging.simplelog.log.org.apache.http", "debug");
         */
 
-        String url;
+        String url = "http://app-2014is203g8t8.rhcloud.com/json";
 
 
         if (args.length != 1) {
@@ -111,7 +113,13 @@ public class JSONChecker {
                 total++;
                 String call = name.substring(posOfDash + 1, posOfDot);
 
-                if (checker.check(call, name)) {
+                boolean testResult = false;
+                if (call.equals("authenticate")) {
+                    testResult = checker.postCheck(call, name);
+                } else {
+                    testResult = checker.getCheck(call, name);
+                }
+                if (testResult) {
                     numPassed++;
                     System.out.println("Test Case " + testCaseNum + " passed");
                 } else {
@@ -120,6 +128,37 @@ public class JSONChecker {
             }
         }
         System.out.println("Total: " + numPassed + "/" + total);
+
+    }
+
+    public boolean assertAuthenticateEquals(String studentAns, String correctAns) {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode studentAnsNode = null;
+        JsonNode correctAnsNode = null;
+
+        try {
+            studentAnsNode = mapper.readTree(studentAns);
+            correctAnsNode = mapper.readTree(correctAns);
+
+            System.out.println("XXX-> " + correctAnsNode.size());
+            System.out.println(correctAnsNode.get("status"));
+            if (correctAnsNode.get("status").asText().equals("success")) {
+
+                // not really OO
+                token = studentAnsNode.get("token").asText();
+
+                // currently check that it contains two attributes,
+                // and the other attribute is called token.
+                return (correctAnsNode.size() == 2) &&
+                        studentAnsNode.get("status").equals(correctAnsNode.get("status"))
+                        &&
+                        (correctAnsNode.get("token") != null);
+            }
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+        System.out.println("went in here");
+        return studentAnsNode != null && studentAnsNode.equals(correctAnsNode);
 
     }
 
@@ -135,6 +174,16 @@ public class JSONChecker {
         }
         return false;
 
+    }
+
+    public Properties readInputFile(String path) {
+        Properties p = new Properties();
+        try {
+            p.load(new FileInputStream(new File(path)));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return p;
     }
 
     public String readFile(String ans) {
@@ -157,36 +206,135 @@ public class JSONChecker {
             File f;
             f = new File(INPUT_DIR + dataFile);
 
-            HttpClient client = new DefaultHttpClient();
-            client.getParams().setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
+            CloseableHttpClient httpclient = HttpClients.createDefault();
 
-            HttpPost post = new HttpPost(url + "bootstrap");
+            HttpPost httppost = new HttpPost(url + "bootstrap");
 
-            MultipartEntity entity = new MultipartEntity(HttpMultipartMode.BROWSER_COMPATIBLE);
+            FileBody bin = new FileBody(f);
 
-            // For File parameters
-            entity.addPart("bootstrap-file", new FileBody( f, "application/zip"));
+            HttpEntity reqEntity = MultipartEntityBuilder.create()
+                    .addPart("bootstrap-file", bin)
+                    .addTextBody("token", token)
+                    .build();
 
-            //String startDate = readFile(INPUT_DIR + call + ".zip.txt");
-            // For usual String parameters
-            //entity.addPart("start-date", new StringBody(startDate, "text/plain",
-            //        Charset.forName("UTF-8")));
 
-            post.setEntity(entity);
+            httppost.setEntity(reqEntity);
 
-            // Here we go!
-            String response = EntityUtils.toString(client.execute(post).getEntity(), "UTF-8");
+            System.out.println("executing request " + httppost.getRequestLine());
+            CloseableHttpResponse response = httpclient.execute(httppost);
+
+
+            HttpEntity resEntity = response.getEntity();
+
+
+            String teamResponse = EntityUtils.toString(resEntity);
+            EntityUtils.consume(resEntity);
 
             // use the same name as the answer
-            writeOutput(call + ".txt", response);
-            client.getConnectionManager().shutdown();
+            writeOutput(call + ".txt", teamResponse);
 //
 //            System.out.println("--->" + OUTPUT_DIR + call + ".txt");
             String answer = readFile(OUTPUT_DIR + call + ".txt");
-//
-//            System.out.println("-->" + answer);
-//            System.out.println(response);
-            return assertEquals(response, answer);
+
+            return assertEquals(teamResponse, answer);
+
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public String sendGet(String call, Properties params) {
+        String result = "";
+
+        CloseableHttpClient client = HttpClientBuilder.create().build();
+        CloseableHttpResponse response = null;
+
+
+        try {
+            URIBuilder builder = new URIBuilder(call);
+
+            // convert the Properties object to an array for iterating thru it :(
+            for (String key : params.keySet().toArray(new String[0])) {
+                builder.addParameter(key, params.getProperty(key));
+            }
+
+            builder.addParameter("token", token);
+
+            HttpGet httpGet = new HttpGet(builder.toString());
+            response = client.execute(httpGet);
+
+
+            HttpEntity entity = response.getEntity();
+            result = EntityUtils.toString(entity);
+
+            EntityUtils.consume(entity);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (response != null) {
+                try {
+                    response.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return result;
+    }
+
+
+    public String sendPost(String call, Properties params) {
+        String result = "";
+
+        CloseableHttpClient client = HttpClientBuilder.create().build();
+        CloseableHttpResponse response = null;
+        try {
+            HttpPost httpPost = new HttpPost(call);
+
+            List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+
+            // convert the Properties object to an array for iterating thru it :(
+            for (String key : params.keySet().toArray(new String[0])) {
+                nvps.add(new BasicNameValuePair(key, params.getProperty(key)));
+            }
+
+            httpPost.setEntity(new UrlEncodedFormEntity(nvps));
+            response = client.execute(httpPost);
+
+
+            HttpEntity entity = response.getEntity();
+
+            result = EntityUtils.toString(entity);
+
+            EntityUtils.consume(entity);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (response != null) {
+                try {
+                    response.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return result;
+    }
+
+    // call - the URL (dump, retrieve etc)
+    public boolean postCheck(String call, String filename) {
+        try {
+            Properties props = readInputFile(INPUT_DIR + filename);
+
+            String response = sendPost(url + call, props);
+
+            String answer = readFile(OUTPUT_DIR + filename);
+            writeOutput(filename, response);
+
+
+            return assertAuthenticateEquals(response, answer);
+
         } catch (Throwable e) {
             e.printStackTrace();
         }
@@ -194,40 +342,16 @@ public class JSONChecker {
     }
 
     // call - the URL (dump, retrieve etc)
-    public boolean check(String call, String filename) {
+    // call - the URL (dump, retrieve etc)
+    public boolean getCheck(String call, String filename) {
         try {
+            Properties props = readInputFile(INPUT_DIR + filename);
 
-            HttpClient client = new DefaultHttpClient();
-
-            HttpParams httpParams = client.getParams();
-            HttpConnectionParams.setConnectionTimeout(httpParams, 50000);
-            HttpConnectionParams.setSoTimeout(httpParams, 50000);
-
-            client.getParams().setParameter(CoreProtocolPNames.PROTOCOL_VERSION, HttpVersion.HTTP_1_1);
-
-            URIBuilder builder = new URIBuilder(new URI(url + call));
-            //builder.setPath(call);
-
-            String input = readFile(INPUT_DIR + filename);
-            if (input != null) {
-                builder.setParameter("r", input);
-            }
-            URI uri = builder.build();
-
-            //System.out.println(uri.toString());
-            HttpGet httpget = new HttpGet(uri);
-
-            // System.out.println(client.execute(httpget).getEntity());
-            String response = EntityUtils.toString(client.execute(httpget).getEntity(), "UTF-8");
-
-            client.getConnectionManager().shutdown();
-
+            String response = sendGet(url + call, props);
 
             String answer = readFile(OUTPUT_DIR + filename);
             writeOutput(filename, response);
 
-            //  System.out.println(response);
-            //  System.out.println(answer);
             return assertEquals(response, answer);
 
         } catch (Throwable e) {
