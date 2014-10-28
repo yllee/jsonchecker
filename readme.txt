@@ -1,5 +1,6 @@
 Create test cases
 1. Create your own test cases in the testcases folder.
+   (some samples are provided. The output are not validated. Use at your own risk!)
    in - (a) filename
         Use the format <number>-<web service name>.[txt|zip].
         Only bootstrap should ends with the zip extension and is a 
