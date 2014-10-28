@@ -1,1 +1,0 @@
-{"course":"IS100","section":"S1"}
