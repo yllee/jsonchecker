@@ -59,8 +59,8 @@ public class JSONChecker {
 
 
         if (args.length != 1) {
-            System.out.println("java JSONCheckerTest <URL>");
-            System.out.println("e.g. java JSONCheckerTest http://2013-G8T8.appspot.com/seisfun/");
+            System.out.println("java JSONChecker <URL>");
+            System.out.println("e.g. java JSONChecker http://app-2014is203g8t8.rhcloud.com/json/");
             return;
         } else {
             url = args[0];
