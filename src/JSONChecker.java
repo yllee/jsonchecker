@@ -100,9 +100,10 @@ public class JSONChecker {
             int posOfDot = name.indexOf(".");
 
             if (directories[i].getName().endsWith(".zip")) {
-                name = name.substring(0, posOfDot);
+                String call = name.substring(posOfDash + 1, posOfDot);
+                String filenameWithoutExt = name.substring(0, posOfDot);
 
-                if (checker.bootstrap(directories[i].getName(), name)) {
+                if (checker.bootstrap(directories[i].getName(), call, filenameWithoutExt)) {
                     numPassed++;
                     System.out.println("Test Case " + testCaseNum + " passed");
                 } else {
@@ -204,14 +205,14 @@ public class JSONChecker {
         return data;
     }
 
-    public boolean bootstrap(String dataFile, String call) {
+    public boolean bootstrap(String dataFile, String call, String filename) {
         try {
             File f;
             f = new File(INPUT_DIR + dataFile);
 
             CloseableHttpClient httpclient = HttpClients.createDefault();
 
-            HttpPost httppost = new HttpPost(url + "bootstrap");
+            HttpPost httppost = new HttpPost(url + call);
 
             FileBody bin = new FileBody(f);
 
@@ -234,10 +235,10 @@ public class JSONChecker {
             EntityUtils.consume(resEntity);
 
             // use the same name as the answer
-            writeOutput(call + ".txt", teamResponse);
+            writeOutput(filename + ".txt", teamResponse);
 //
 //            System.out.println("--->" + OUTPUT_DIR + call + ".txt");
-            String answer = readFile(OUTPUT_DIR + call + ".txt");
+            String answer = readFile(OUTPUT_DIR + filename + ".txt");
 
             return assertEquals(teamResponse, answer);
 
