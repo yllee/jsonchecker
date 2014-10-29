@@ -30,6 +30,7 @@ public class JSONChecker {
 
     public JSONChecker(String url) {
         this.url = url;
+        this.token = "";
     }
 
     public static void writeOutput(String file, String response) {
@@ -58,8 +59,8 @@ public class JSONChecker {
 
 
         if (args.length != 1) {
-            System.out.println("java JSONCheckerTest <URL>");
-            System.out.println("e.g. java JSONCheckerTest http://2013-G8T8.appspot.com/seisfun/");
+            System.out.println("java JSONChecker <URL>");
+            System.out.println("e.g. java JSONChecker http://app-2014is203g8t8.rhcloud.com/json/");
             return;
         } else {
             url = args[0];
@@ -99,8 +100,6 @@ public class JSONChecker {
             int posOfDot = name.indexOf(".");
 
             if (directories[i].getName().endsWith(".zip")) {
-                total++;
-
                 name = name.substring(0, posOfDot);
 
                 if (checker.bootstrap(directories[i].getName(), name)) {
@@ -110,7 +109,6 @@ public class JSONChecker {
                     System.out.println("Test Case " + testCaseNum + " failed");
                 }
             } else {
-                total++;
                 String call = name.substring(posOfDash + 1, posOfDot);
 
                 boolean testResult = false;
@@ -126,6 +124,8 @@ public class JSONChecker {
                     System.out.println("Test Case " + testCaseNum + " failed");
                 }
             }
+
+            total++;
         }
         System.out.println("Total: " + numPassed + "/" + total);
 
@@ -140,24 +140,27 @@ public class JSONChecker {
             studentAnsNode = mapper.readTree(studentAns);
             correctAnsNode = mapper.readTree(correctAns);
 
-            System.out.println("XXX-> " + correctAnsNode.size());
-            System.out.println(correctAnsNode.get("status"));
-            if (correctAnsNode.get("status").asText().equals("success")) {
-
-                // not really OO
-                token = studentAnsNode.get("token").asText();
-
+            if (studentAnsNode.get("status").asText().equals("success")) {
                 // currently check that it contains two attributes,
+                // response status matches the answer status,
                 // and the other attribute is called token.
-                return (correctAnsNode.size() == 2) &&
-                        studentAnsNode.get("status").equals(correctAnsNode.get("status"))
-                        &&
-                        (correctAnsNode.get("token") != null);
+                if ((studentAnsNode.size() == 2)
+                        && studentAnsNode.get("status").equals(correctAnsNode.get("status"))
+                        && (correctAnsNode.get("token") != null)) {
+                    // not really OO
+                    // store the received token inside the instance variable
+                    // for use in subsequent requests
+                    token = studentAnsNode.get("token").asText();
+                    return true;
+                } else {
+                    return false;
+                }
             }
         } catch (Throwable e) {
             e.printStackTrace();
         }
-        System.out.println("went in here");
+
+        // response is not successful, still compare it with the answer
         return studentAnsNode != null && studentAnsNode.equals(correctAnsNode);
 
     }
