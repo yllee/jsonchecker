@@ -77,10 +77,10 @@ public class JSONChecker {
 
         File f = new File("testcases/in");
 
-        File[] directories = f.listFiles(new FilenameFilter() {
+        File[] directories = f.listFiles(new FileFilter() {
             @Override
-            public boolean accept(File dir, String name) {
-                return (name.matches("[0-9]+.*"));
+            public boolean accept(File dir) {
+                return !dir.isDirectory() && dir.getName().matches("[0-9]+.*");
             }
         });
 
