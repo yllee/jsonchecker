@@ -18,7 +18,7 @@ Create test cases
 
 Compile
 Extract the files to a directory, and type "compile" in the directory.
-The class files will be compiled to the classes folder.
+The class files will be compiled to the classes folder. (You need to create the classes folder!)
 
 Run
 type "run <URL>" in the command prompt window (you should be in 
