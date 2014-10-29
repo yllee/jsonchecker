@@ -59,8 +59,8 @@ public class JSONChecker {
 
 
         if (args.length != 1) {
-            System.out.println("java JSONCheckerTest <URL>");
-            System.out.println("e.g. java JSONCheckerTest http://2013-G8T8.appspot.com/seisfun/");
+            System.out.println("java JSONChecker <URL>");
+            System.out.println("e.g. java JSONChecker http://app-2014is203g8t8.rhcloud.com/json/");
             return;
         } else {
             url = args[0];
@@ -100,8 +100,6 @@ public class JSONChecker {
             int posOfDot = name.indexOf(".");
 
             if (directories[i].getName().endsWith(".zip")) {
-                total++;
-
                 name = name.substring(0, posOfDot);
 
                 if (checker.bootstrap(directories[i].getName(), name)) {
@@ -111,7 +109,6 @@ public class JSONChecker {
                     System.out.println("Test Case " + testCaseNum + " failed");
                 }
             } else {
-                total++;
                 String call = name.substring(posOfDash + 1, posOfDot);
 
                 boolean testResult = false;
@@ -127,6 +124,8 @@ public class JSONChecker {
                     System.out.println("Test Case " + testCaseNum + " failed");
                 }
             }
+
+            total++;
         }
         System.out.println("Total: " + numPassed + "/" + total);
 
