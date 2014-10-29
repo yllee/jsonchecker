@@ -30,6 +30,7 @@ public class JSONChecker {
 
     public JSONChecker(String url) {
         this.url = url;
+        this.token = "";
     }
 
     public static void writeOutput(String file, String response) {
