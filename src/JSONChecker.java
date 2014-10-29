@@ -140,24 +140,27 @@ public class JSONChecker {
             studentAnsNode = mapper.readTree(studentAns);
             correctAnsNode = mapper.readTree(correctAns);
 
-            System.out.println("XXX-> " + correctAnsNode.size());
-            System.out.println(correctAnsNode.get("status"));
-            if (correctAnsNode.get("status").asText().equals("success")) {
-
-                // not really OO
-                token = studentAnsNode.get("token").asText();
-
+            if (studentAnsNode.get("status").asText().equals("success")) {
                 // currently check that it contains two attributes,
+                // response status matches the answer status,
                 // and the other attribute is called token.
-                return (correctAnsNode.size() == 2) &&
-                        studentAnsNode.get("status").equals(correctAnsNode.get("status"))
-                        &&
-                        (correctAnsNode.get("token") != null);
+                if ((studentAnsNode.size() == 2)
+                        && studentAnsNode.get("status").equals(correctAnsNode.get("status"))
+                        && (correctAnsNode.get("token") != null)) {
+                    // not really OO
+                    // store the received token inside the instance variable
+                    // for use in subsequent requests
+                    token = studentAnsNode.get("token").asText();
+                    return true;
+                } else {
+                    return false;
+                }
             }
         } catch (Throwable e) {
             e.printStackTrace();
         }
-        System.out.println("went in here");
+
+        // response is not successful, still compare it with the answer
         return studentAnsNode != null && studentAnsNode.equals(correctAnsNode);
 
     }
