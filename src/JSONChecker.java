@@ -100,8 +100,6 @@ public class JSONChecker {
             int posOfDot = name.indexOf(".");
 
             if (directories[i].getName().endsWith(".zip")) {
-                total++;
-
                 name = name.substring(0, posOfDot);
 
                 if (checker.bootstrap(directories[i].getName(), name)) {
@@ -111,7 +109,6 @@ public class JSONChecker {
                     System.out.println("Test Case " + testCaseNum + " failed");
                 }
             } else {
-                total++;
                 String call = name.substring(posOfDash + 1, posOfDot);
 
                 boolean testResult = false;
@@ -127,6 +124,8 @@ public class JSONChecker {
                     System.out.println("Test Case " + testCaseNum + " failed");
                 }
             }
+
+            total++;
         }
         System.out.println("Total: " + numPassed + "/" + total);
 
