@@ -1,0 +1,45 @@
+{
+  "status": "success",
+  "heatmap": [
+    {
+      "semantic-place": "SMUSISL3CLSRM",
+      "num-people": 0,
+      "crowd-density": 0
+    },
+    {
+      "semantic-place": "SMUSISL3LOBBY",
+      "num-people": 1,
+      "crowd-density": 1
+    },
+    {
+      "semantic-place": "SMUSISL3SR3-1",
+      "num-people": 0,
+      "crowd-density": 0
+    },
+    {
+      "semantic-place": "SMUSISL3SR3-2",
+      "num-people": 0,
+      "crowd-density": 0
+    },
+    {
+      "semantic-place": "SMUSISL3SR3-3",
+      "num-people": 0,
+      "crowd-density": 0
+    },
+    {
+      "semantic-place": "SMUSISL3SR3-4",
+      "num-people": 0,
+      "crowd-density": 0
+    },
+    {
+      "semantic-place": "SMUSISL3STUDYAREA1",
+      "num-people": 0,
+      "crowd-density": 0
+    },
+    {
+      "semantic-place": "SMUSISL3STUDYAREA2",
+      "num-people": 0,
+      "crowd-density": 0
+    }
+  ]
+}

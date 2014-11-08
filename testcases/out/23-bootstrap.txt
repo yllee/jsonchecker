@@ -1,0 +1,196 @@
+{
+  "status": "error",
+  "num-record-loaded": [
+    {
+      "demographics.csv": 1
+    },
+    {
+      "location-lookup.csv": 541
+    },
+    {
+      "location.csv": 2
+    }
+  ],
+  "error": [
+    {
+      "file": "demographics.csv",
+      "line": 2,
+      "message": [
+        "invalid mac address"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 3,
+      "message": [
+        "invalid password"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 4,
+      "message": [
+        "invalid password",
+        "invalid email",
+        "invalid gender"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 5,
+      "message": [
+        "invalid mac address"
+      ]
+    },
+    {
+      "file": "location-lookup.csv",
+      "line": 3,
+      "message": [
+        "invalid location id"
+      ]
+    },
+    {
+      "file": "location-lookup.csv",
+      "line": 4,
+      "message": [
+        "invalid location id",
+        "invalid semantic place"
+      ]
+    },
+    {
+      "file": "location-lookup.csv",
+      "line": 5,
+      "message": [
+        "invalid semantic place"
+      ]
+    },
+    {
+      "file": "location-lookup.csv",
+      "line": 6,
+      "message": [
+        "invalid location id",
+        "invalid semantic place"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 2,
+      "message": [
+        "invalid location"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 3,
+      "message": [
+        "invalid timestamp"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 4,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 5,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 6,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 7,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 8,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 9,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 10,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 11,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 12,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 13,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 14,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 15,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 16,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 17,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 20,
+      "message": [
+        "invalid location"
+      ]
+    }
+  ]
+}
+

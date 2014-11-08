@@ -1,0 +1,57 @@
+{
+  "status": "success",
+  "total-groups": 2,
+  "total-users": 4,
+  "groups": [
+    {
+      "size": 2,
+      "total-time-spent": 779,
+      "members": [
+        {
+          "email": "abs.2014@sis.smu.edu.sg",
+          "mac-address": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        {
+          "email": "corn.2014@sis.smu.edu.sg",
+          "mac-address": "cccccccccccccccccccccccccccccccccccccccc"
+        }
+      ],
+      "locations": [
+              {
+                "location": "1010200111",
+                "time-spent": 660
+              },
+        {
+          "location": "1010300137",
+          "time-spent": 119
+        }
+
+      ]
+    },
+    {
+      "size": 2,
+      "total-time-spent": 779,
+      "members": [
+        {
+          "email": "busy.2014@sis.smu.edu.sg",
+          "mac-address": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "email": "debt.2014@sis.smu.edu.sg",
+          "mac-address": "dddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "locations": [
+
+        {
+          "location": "1010200111",
+          "time-spent": 660
+        },
+        {
+          "location": "1010300124",
+          "time-spent": 119
+        }
+      ]
+    }
+  ]
+}

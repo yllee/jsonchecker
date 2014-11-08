@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "results": [
+    {
+      "rank": 1,
+      "semantic-place": "SMUSISL3SR3-1",
+      "num-groups": 2
+    },
+    {
+      "rank": 2,
+      "semantic-place": "SMUSISL2SR2-3",
+      "num-groups": 1
+    },
+        {
+          "rank": 2,
+          "semantic-place": "SMUSISL2SR2-4",
+          "num-groups": 1
+        }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "total-users": 1,
+  "total-next-place-users": 1,
+  "results": [
+    {
+      "rank": 1,
+      "semantic-place": "SMUSISL5LOBBY",
+      "count": 1
+    }
+  ]
+}

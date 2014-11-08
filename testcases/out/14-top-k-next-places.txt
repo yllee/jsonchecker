@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "total-users": 10,
+  "total-next-place-users": 10,
+  "results": [
+    {
+      "rank": 1,
+      "semantic-place": "SMUSISL3SR3-1",
+      "count": 5
+    },
+    {
+      "rank": 2,
+      "semantic-place": "SMUSISL3SR3-2",
+      "count": 3
+    },
+    {
+      "rank": 3,
+      "semantic-place": "SMUSISL3SR3-3",
+      "count": 2
+    }
+  ]
+}
