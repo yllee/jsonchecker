@@ -68,8 +68,7 @@
       "file": "location-lookup.csv",
       "line": 6,
       "message": [
-        "invalid location id",
-        "invalid semantic place"
+        "invalid location id"
       ]
     },
     {
