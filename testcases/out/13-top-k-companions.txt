@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "result": [
+  "results": [
     {
       "rank": 1,
       "companion": "basanti.WONG.2014@sis.smu.edu.sg",
