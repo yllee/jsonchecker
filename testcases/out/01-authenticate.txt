@@ -1,1 +1,4 @@
-{"token":"eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MTQ0NjIwMzEsInN1YiI6ImFkbWluIiwiaWF0IjoxNDE0NDU4NDMxfQ.qARpsszB-Eb1IPgOJz2CS6H_zRtCVa2n356PJ_FZ8-4","status":"success"}
+{
+  "status": "success",
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0MTUzNzI3NTQsInN1YiI6ImFkbWluIiwiaWF0IjoxNDE1MzY5MTU0fQ.M-RymINgT8x5zZAWq71X9Iz7NYBU87l2N06KIjXhdWM"
+}
