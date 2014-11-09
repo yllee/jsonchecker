@@ -3,12 +3,12 @@
   "results": [
     {
       "rank": 1,
-      "semantic-place": "SMUSISL2STUDYAREA2",
+      "semantic-place": "SMUSISL2STUDYAREA2N",
       "count": 31
     },
     {
       "rank": 2,
-      "semantic-place": "SMUSISL2STUDYAREA1",
+      "semantic-place": "SMUSISL2STUDYAREA1N",
       "count": 21
     }
   ]

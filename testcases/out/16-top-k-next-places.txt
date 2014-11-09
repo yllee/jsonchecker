@@ -5,7 +5,7 @@
   "results": [
     {
       "rank": 1,
-      "semantic-place": "SMUSISL5LOBBY",
+      "semantic-place": "SMUSISL5LOBBYN",
       "count": 1
     }
   ]

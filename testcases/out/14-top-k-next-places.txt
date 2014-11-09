@@ -5,17 +5,17 @@
   "results": [
     {
       "rank": 1,
-      "semantic-place": "SMUSISL3SR3-1",
+      "semantic-place": "SMUSISL3SR3-1N",
       "count": 5
     },
     {
       "rank": 2,
-      "semantic-place": "SMUSISL3SR3-2",
+      "semantic-place": "SMUSISL3SR3-2N",
       "count": 3
     },
     {
       "rank": 3,
-      "semantic-place": "SMUSISL3SR3-3",
+      "semantic-place": "SMUSISL3SR3-3N",
       "count": 2
     }
   ]

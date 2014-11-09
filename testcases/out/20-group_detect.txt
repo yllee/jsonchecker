@@ -56,7 +56,7 @@
          ]
       },
       {
-         "size":3,
+         "size":2,
          "total-time-spent":720,
          "members":[
             {
@@ -74,7 +74,7 @@
                "time-spent":660
             },
             {
-               "location":"1010300134",
+               "location":"1010300137",
                "time-spent":60
             }
          ]

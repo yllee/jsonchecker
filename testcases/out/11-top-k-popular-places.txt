@@ -3,22 +3,22 @@
   "results": [
     {
       "rank": 1,
-      "semantic-place": "SMUSISL2SR2-1",
+      "semantic-place": "SMUSISL2SR2-1N",
       "count": 10
     },
     {
       "rank": 2,
-      "semantic-place": "SMUSISL2SR2-2",
+      "semantic-place": "SMUSISL2SR2-2N",
       "count": 9
     },
     {
       "rank": 3,
-      "semantic-place": "SMUSISL2SR2-3",
+      "semantic-place": "SMUSISL2SR2-3N",
       "count": 8
     },
     {
       "rank": 3,
-      "semantic-place": "SMUSISL2SR2-4",
+      "semantic-place": "SMUSISL2SR2-4N",
       "count": 8
     }
   ]

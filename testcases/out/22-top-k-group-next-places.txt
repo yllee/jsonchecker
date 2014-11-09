@@ -1,12 +1,12 @@
 {
   "status": "success",
   "total-groups": 2,
-  "total-next-place-groups": 1,
+  "total-next-place-groups": 2,
       "results": [
           {
               "rank": 1,
-              "semantic-place": "SMUSISL5ACADOFFICE",
-              "num-groups": 1
+              "semantic-place": "SMUSISL5ACADOFFICEN",
+              "num-groups": 2
           }
       ]
 }
