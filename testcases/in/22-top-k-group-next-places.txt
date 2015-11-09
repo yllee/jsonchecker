@@ -1,3 +1,0 @@
-date=2014-10-11T12:15:00
-origin=SMUSISL3SR3-1N
-k=3

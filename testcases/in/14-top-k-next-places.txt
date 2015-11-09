@@ -1,4 +1,0 @@
-#TC15
-date=2014-04-01T15:30:00
-origin=SMUSISL2SR2-1N
-k=3

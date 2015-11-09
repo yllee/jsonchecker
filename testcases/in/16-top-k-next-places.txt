@@ -1,4 +1,0 @@
-#TC17
-date=2014-04-01T18:00:00
-origin=SMUSISL5LOBBYN
-k=1
