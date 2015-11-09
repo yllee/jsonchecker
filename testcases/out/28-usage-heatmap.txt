@@ -1,0 +1,32 @@
+{
+  "status" : "success",
+  "heatmap" : [ {
+    "semantic-place" : "SMUSISL2LOBBY",
+    "num-people-using-phone" : 0,
+    "crowd-density" : 0
+  }, {
+    "semantic-place" : "SMUSISL2SR2-1",
+    "num-people-using-phone" : 0,
+    "crowd-density" : 0
+  }, {
+    "semantic-place" : "SMUSISL2SR2-2",
+    "num-people-using-phone" : 0,
+    "crowd-density" : 0
+  }, {
+    "semantic-place" : "SMUSISL2SR2-3",
+    "num-people-using-phone" : 0,
+    "crowd-density" : 0
+  }, {
+    "semantic-place" : "SMUSISL2SR2-4",
+    "num-people-using-phone" : 0,
+    "crowd-density" : 0
+  }, {
+    "semantic-place" : "SMUSISL2STUDYAREA1",
+    "num-people-using-phone" : 0,
+    "crowd-density" : 0
+  }, {
+    "semantic-place" : "SMUSISL2STUDYAREA2",
+    "num-people-using-phone" : 3,
+    "crowd-density" : 1
+  } ]
+}

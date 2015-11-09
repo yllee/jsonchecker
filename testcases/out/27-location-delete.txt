@@ -1,0 +1,9 @@
+{
+  "status" : "success",
+  "num-record-deleted" : 1,
+  "rows-deleted" : [ {
+    "location-id" : 1010200083,
+    "mac-address" : "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "timestamp" : "2015-09-07 23:50:01"
+  } ]
+}

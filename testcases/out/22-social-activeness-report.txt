@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "results": {
+    "total-social-app-usage-duration": 1200,
+    "individual-social-app-usage": [
+      {
+        "app-name": "Facebook V2",
+        "percent": 30
+      },
+      {
+        "app-name": "Telegram V2",
+        "percent": 50
+      },
+      {
+        "app-name": "WhatsApp V2",
+        "percent": 20
+      }
+    ],
+    "total-time-spent-in-sis": 86400,
+    "group-percent": 0,
+    "solo-percent": 100
+  }
+}

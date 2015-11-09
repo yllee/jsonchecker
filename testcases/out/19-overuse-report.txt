@@ -1,0 +1,20 @@
+{
+  "status": "success",
+  "results": {
+    "overuse-index": "ToBeCautious",
+    "metrics": [
+      {
+        "usage-category": "Light",
+        "usage-duration": 793
+      },
+      {
+        "gaming-category": "Light",
+        "gaming-duration": 10
+      },
+      {
+        "accessfrequency-category": "Moderate",
+        "accessfrequency": 3.00
+      }
+    ]
+  }
+}

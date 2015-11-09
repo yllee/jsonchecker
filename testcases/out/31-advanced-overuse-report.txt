@@ -1,0 +1,9 @@
+{
+  "status" : "success",
+  "results" : {
+    "overuse-index" : "Normal",
+    "total-class-duration" : 0,
+    "total-small-group-duration" : 0,
+    "non-productive-app-duration" : 0
+  }
+}

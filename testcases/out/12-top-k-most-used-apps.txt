@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "results": [
+    {
+      "rank": 1,
+      "app-name": "Telegram V2",
+      "duration": 600
+    },
+    {
+      "rank": 2,
+      "app-name": "Facebook V2",
+      "duration": 360
+    }
+  ]
+}

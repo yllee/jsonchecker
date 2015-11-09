@@ -1,0 +1,101 @@
+{
+  "status": "sucesss",
+  "breakdown": [
+    {
+      "period": "00:00-01:00",
+      "duration": 0
+    },
+    {
+      "period": "01:00-02:00",
+      "duration": 0
+    },
+    {
+      "period": "02:00-03:00",
+      "duration": 0
+    },
+    {
+      "period": "03:00-04:00",
+      "duration": 0
+    },
+    {
+      "period": "04:00-05:00",
+      "duration": 0
+    },
+    {
+      "period": "05:00-06:00",
+      "duration": 0
+    },
+    {
+      "period": "06:00-07:00",
+      "duration": 0
+    },
+    {
+      "period": "07:00-08:00",
+      "duration": 0
+    },
+    {
+      "period": "08:00-09:00",
+      "duration": 0
+    },
+    {
+      "period": "09:00-10:00",
+      "duration": 0
+    },
+    {
+      "period": "10:00-11:00",
+      "duration": 0
+    },
+    {
+      "period": "11:00-12:00",
+      "duration": 0
+    },
+    {
+      "period": "12:00-13:00",
+      "duration": 0
+    },
+    {
+      "period": "13:00-14:00",
+      "duration": 0
+    },
+    {
+      "period": "14:00-15:00",
+      "duration": 0
+    },
+    {
+      "period": "15:00-16:00",
+      "duration": 0
+    },
+    {
+      "period": "16:00-17:00",
+      "duration": 0
+    },
+    {
+      "period": "17:00-18:00",
+      "duration": 0
+    },
+    {
+      "period": "18:00-19:00",
+      "duration": 0
+    },
+    {
+      "period": "19:00-20:00",
+      "duration": 0
+    },
+    {
+      "period": "20:00-21:00",
+      "duration": 0
+    },
+    {
+      "period": "21:00-22:00",
+      "duration": 0
+    },
+    {
+      "period": "22:00-23:00",
+      "duration": 98
+    },
+    {
+      "period": "23:00-00:00",
+      "duration": 545
+    }
+  ]
+}

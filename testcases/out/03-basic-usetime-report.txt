@@ -1,0 +1,17 @@
+{
+    "status": "success",
+    "breakdown": [
+        {
+            "intense-count": 1,
+            "intense-percent": 33
+        },
+        {
+            "normal-count": 1,
+            "normal-percent": 33
+        },
+        {
+            "mild-count": 1,
+            "mild-percent": 33
+        }
+    ]
+}

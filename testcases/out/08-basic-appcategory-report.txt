@@ -1,0 +1,55 @@
+{
+  "status": "success",
+  "breakdown": [
+    {
+      "category-name": "books",
+      "category-duration": 0,
+      "category-percent": 0
+    },
+    {
+      "category-name": "education",
+      "category-duration": 10,
+      "category-percent": 1
+    },
+    {
+      "category-name": "entertainment",
+      "category-duration": 0,
+      "category-percent": 0
+    },
+    {
+      "category-name": "fitness",
+      "category-duration": 0,
+      "category-percent": 0
+    },
+    {
+      "category-name": "games",
+      "category-duration": 0,
+      "category-percent": 0
+    },
+    {
+      "category-name": "information",
+      "category-duration": 0,
+      "category-percent": 0
+    },
+    {
+      "category-name": "local",
+      "category-duration": 0,
+      "category-percent": 0
+    },
+    {
+      "category-name": "others",
+      "category-duration": 0,
+      "category-percent": 0
+    },
+    {
+      "category-name": "social",
+      "category-duration": 1200,
+      "category-percent": 99
+    },
+    {
+      "category-name": "tools",
+      "category-duration": 0,
+      "category-percent": 0
+    }
+  ]
+}

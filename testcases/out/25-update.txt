@@ -1,0 +1,66 @@
+{
+  "status": "error",
+  "num-record-loaded": [
+    {
+      "location.csv": 0
+    }
+  ],
+  "error": [
+    {
+      "file": "location.csv",
+      "line": 2,
+      "message": [
+        "invalid location"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 3,
+      "message": [
+        "invalid location"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 4,
+      "message": [
+        "invalid location"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 5,
+      "message": [
+        "invalid location"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 6,
+      "message": [
+        "invalid location"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 7,
+      "message": [
+        "invalid location"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 8,
+      "message": [
+        "invalid location"
+      ]
+    },
+    {
+      "file": "location.csv",
+      "line": 9,
+      "message": [
+        "invalid location"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "status": "success",
+  "results": [
+    {
+      "rank": 1,
+      "school": "sis",
+      "duration": 1920
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "status": "error",
+  "num-record-loaded": [
+    {
+      "app-lookup.csv": 5
+    },
+    {
+      "app.csv": 8
+    },
+    {
+      "demographics.csv": 3
+    }
+  ],
+  "error": [
+    {
+      "file": "app-lookup.csv",
+      "line": 7,
+      "message": [
+        "blank app-id",
+        "blank app-name"
+      ]
+    },
+    {
+      "file": "app-lookup.csv",
+      "line": 8,
+      "message": [
+        "invalid app id"
+      ]
+    },
+    {
+      "file": "app-lookup.csv",
+      "line": 9,
+      "message": [
+        "invalid app category"
+      ]
+    },
+    {
+      "file": "app.csv",
+      "line": 2,
+      "message": [
+        "duplicate row"
+      ]
+    },
+    {
+      "file": "app.csv",
+      "line": 10,
+      "message": [
+        "invalid timestamp"
+      ]
+    },
+    {
+      "file": "app.csv",
+      "line": 11,
+      "message": [
+        "invalid timestamp"
+      ]
+    },
+    {
+      "file": "app.csv",
+      "line": 12,
+      "message": [
+        "invalid timestamp"
+      ]
+    },
+    {
+      "file": "app.csv",
+      "line": 13,
+      "message": [
+        "invalid app"
+      ]
+    },
+    {
+      "file": "app.csv",
+      "line": 14,
+      "message": [
+        "invalid mac address"
+      ]
+    },
+    {
+      "file": "app.csv",
+      "line": 15,
+      "message": [
+        "no matching mac address"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 5,
+      "message": [
+        "invalid mac address"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 6,
+      "message": [
+        "invalid password"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 7,
+      "message": [
+        "invalid password"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 8,
+      "message": [
+        "invalid email"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 9,
+      "message": [
+        "invalid email"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 10,
+      "message": [
+        "invalid email"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 11,
+      "message": [
+        "invalid gender"
+      ]
+    },
+    {
+      "file": "demographics.csv",
+      "line": 12,
+      "message": [
+        "cca record too long"
+      ]
+    }
+  ]
+}

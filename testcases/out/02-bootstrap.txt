@@ -2,13 +2,19 @@
   "status": "success",
   "num-record-loaded": [
     {
-      "demographics.csv": 140
+      "app-lookup.csv": 9
+    },
+    {
+      "app.csv": 793
+    },
+    {
+      "demographics.csv": 1599
     },
     {
       "location-lookup.csv": 543
     },
     {
-      "location.csv": 450
+      "location.csv": 1189
     }
   ]
 }

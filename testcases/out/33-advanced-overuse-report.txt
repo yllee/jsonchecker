@@ -1,0 +1,9 @@
+{
+  "status" : "success",
+  "results" : {
+    "overuse-index" : "ToBeCautious",
+    "total-class-duration" : 3600,
+    "total-small-group-duration" : 360,
+    "non-productive-app-duration" : 540
+  }
+}

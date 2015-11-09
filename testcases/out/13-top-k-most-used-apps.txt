@@ -1,0 +1,16 @@
+{
+  "status" : "success",
+  "results" : [ {
+    "rank" : 1,
+    "name" : "Facebook V2",
+    "duration" : 600
+  }, {
+    "rank" : 1,
+    "name" : "Telegram V2",
+    "duration" : 600
+  }, {
+    "rank" : 1,
+    "name" : "WhatsApp V2",
+    "duration" : 600
+  } ]
+}

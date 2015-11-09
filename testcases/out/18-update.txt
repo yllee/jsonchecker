@@ -1,0 +1,21 @@
+{
+  "status" : "error",
+  "num-record-loaded" : [ {
+    "app.csv" : 0
+  }, {
+    "demographics.csv" : 3
+  } ],
+  "error" : [ {
+    "file" : "app.csv",
+    "line" : 2,
+    "message" : [ "duplicate row" ]
+  }, {
+    "file" : "app.csv",
+    "line" : 3,
+    "message" : [ "duplicate row" ]
+  }, {
+    "file" : "app.csv",
+    "line" : 4,
+    "message" : [ "duplicate row" ]
+  } ]
+}

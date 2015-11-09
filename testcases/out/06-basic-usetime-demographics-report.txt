@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "breakdown": [
+    {
+      "gender": "F",
+      "count": 2,
+      "percent": 67,
+      "breakdown": [
+        {
+          "intense-count": 1,
+          "intense-percent": 33
+        },
+        {
+          "normal-count": 1,
+          "normal-percent": 33
+        },
+        {
+          "mild-count": 0,
+          "mild-percent": 0
+        }
+      ]
+    },
+    {
+      "gender": "M",
+      "count": 1,
+      "percent": 33,
+      "breakdown": [
+        {
+          "intense-count": 0,
+          "intense-percent": 0
+        },
+        {
+          "normal-count": 0,
+          "normal-percent": 0
+        },
+        {
+          "mild-count": 1,
+          "mild-percent": 33
+        }
+      ]
+    }
+  ]
+}
