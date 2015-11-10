@@ -32,6 +32,11 @@
       "category-percent": 0
     },
     {
+      "category-name": "library",
+      "category-duration": 0,
+      "category-percent": 0
+    },
+    {
       "category-name": "local",
       "category-duration": 0,
       "category-percent": 0
