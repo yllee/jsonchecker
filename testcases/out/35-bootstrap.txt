@@ -16,8 +16,8 @@
       "file": "app-lookup.csv",
       "line": 7,
       "message": [
-        "blank app-id",
-        "blank app-name"
+        "blank app-name",
+        "blank app-id"
       ]
     },
     {
