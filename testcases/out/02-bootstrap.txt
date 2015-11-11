@@ -9,12 +9,6 @@
     },
     {
       "demographics.csv": 1599
-    },
-    {
-      "location-lookup.csv": 543
-    },
-    {
-      "location.csv": 1189
     }
   ]
 }
