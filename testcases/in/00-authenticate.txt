@@ -1,2 +1,0 @@
-username=admin
-password=I-Love-SE-Deep-Deep

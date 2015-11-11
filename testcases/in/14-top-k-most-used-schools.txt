@@ -1,4 +1,0 @@
-startdate=2015-09-11
-enddate=2015-09-11
-appcategory=social
-k=3

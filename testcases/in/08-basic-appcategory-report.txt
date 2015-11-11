@@ -1,2 +1,0 @@
-startdate=2015-09-03
-enddate=2015-09-03

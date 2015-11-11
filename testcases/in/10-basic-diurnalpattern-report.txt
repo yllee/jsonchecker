@@ -1,4 +1,0 @@
-date=2015-09-06
-yearfilter=NA
-genderfilter=NA
-schoolfilter=NA

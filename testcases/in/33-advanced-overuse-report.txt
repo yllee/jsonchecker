@@ -1,4 +1,0 @@
-startdate=2015-03-02
-enddate=2015-03-02
-macaddress=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-

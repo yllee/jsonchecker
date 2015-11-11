@@ -1,2 +1,0 @@
-username=joey.2011
-password=asdf0000
