@@ -1,9 +1,9 @@
 {
   "status" : "success",
   "results" : {
-    "overuse-index" : "Normal",
-    "total-class-duration" : 0,
+    "overuse-index" : "ToBeCautious",
+    "total-class-duration" : 3600,
     "total-small-group-duration" : 0,
-    "non-productive-app-duration" : 0
+    "non-productive-app-duration" : 551
   }
 }

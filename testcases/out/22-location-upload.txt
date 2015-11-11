@@ -1,0 +1,22 @@
+{
+  "status": "success",
+  "num-record-loaded": [
+    {
+      "app-lookup.csv": 9
+    },
+    {
+      "app.csv": 793
+    },
+    {
+      "demographics.csv": 1599
+    },
+    {
+      "location-lookup.csv": 543
+    },
+    {
+      "location.csv": 1197
+    }
+  ],
+    "num-record-deleted": 1,
+    "num-record-not-found": 2
+}

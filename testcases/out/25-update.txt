@@ -1,9 +1,0 @@
-{
-  "status": "success",
-  "num-record-loaded": [
-    {
-      "location.csv": 8
-    }
-  ]
-  ]
-}
